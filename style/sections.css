@@ -1,0 +1,966 @@
+/* Кнопка All blocks  */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: -4px;
+}
+
+.dropdown_content {
+    right: 0;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown_content {
+    display: block;
+}
+
+.dropdown_content a {
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: .5s;
+}
+
+.dropdown_content a:hover {
+    background-color: gray;
+    color: #fff;
+    transition: .5s;
+}
+
+
+/* Модалка телефона */
+
+.phone_modal {
+    width: 65px;
+    height: 65px;
+    font-size: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    color: #cc2120;
+    box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+
+/* Модальное окно */
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #100f0f;
+    font-size: 15px;
+}
+
+.phone_content {
+    background-color: #f5f5f5;
+    width: 230px;
+    /* height: 200px; */
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    border-radius: 2px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone_content.active {
+    display: flex;
+}
+
+.phone_content img {
+    width: 120%;
+}
+
+.phone_content h3 {
+    color: #100f0f;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.phone_content p {
+    font-size: 13px;
+}
+
+.phone_content a {
+    color: #100f0f;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.phone_content span {
+    cursor: pointer;
+}
+
+.phone {
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+
+/* .fa-angle-down {
+    position: absolute;
+    bottom: 5px;
+    color: #cc2120;
+} */
+
+
+/* .fa-angle-down.active {} */
+
+
+/* Модальное окошко в модальном окошке */
+
+.pc_links {
+    width: 100%;
+    height: 90px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid gray;
+}
+
+.pc_links i {
+    margin: 0 10px;
+    font-size: 30px;
+}
+
+.pc_links.active {
+    display: flex;
+}
+
+
+/* Кнопка вверх */
+
+.button_to_top {
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 45px;
+    height: 45px;
+    background-color: #cc2120;
+    border-radius: 50%;
+    color: #fff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.button_to_top.active {
+    animation: btn_to_top 1s forwards;
+    opacity: 0;
+    display: flex;
+}
+
+@keyframes btn_to_top {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Модалка на кнопку "buy now" */
+
+.modal_all {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_buy_now {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #f5f5f5;
+    display: none;
+}
+
+.modal_buy_now.active {
+    display: flex;
+}
+
+.mbn_container {
+    width: 50%;
+    height: 50%;
+    background-color: #100f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    position: relative;
+}
+
+.mbn_container img {
+    width: 50%;
+    vertical-align: middle
+}
+
+.mbn_container p {
+    margin: 20px 0;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.mbn_container input {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.mbn_container input::placeholder {
+    padding-left: 10px;
+    color: #100f0f;
+    font-size: 12px;
+}
+
+.mbn_content {
+    width: 50%;
+}
+
+.mbn_close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-decoration: none;
+    color: #f5f5f5;
+}
+
+.video {
+    display: none;
+}
+
+.video.active {
+    display: flex;
+}
+
+.video_close {
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    text-decoration: none;
+    color: #c7c3c3;
+}
+
+
+/* Хэдэр */
+
+.header {
+    z-index: 100;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 10%;
+    background-color: transparent;
+    margin-top: 20px;
+}
+
+.header.active {
+    margin-top: 0px;
+    background-color: #100f0f;
+}
+
+.logo img {
+    width: 18%;
+}
+
+.logo,
+.header_links {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    /* Посмотри как можно убрать width */
+    width: 120px;
+    margin: 0 30px;
+    color: red;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.logo span {
+    color: #fff;
+}
+
+.header_links {
+    margin-right: 200px;
+}
+
+.header_links a {
+    color: #c7c3c3;
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.header_links a:hover {
+    transition: .5s;
+    color: #fff;
+}
+
+
+/* 1я секция */
+
+.sec_one {
+    background-size: cover;
+    background-image: url('../imgs/background/sec_one/home-bg1.png');
+    background-color: #100f0f;
+    height: 110vh;
+    /* width: 100%; */
+}
+
+.sec_one_bg1 {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right bottom;
+    background-image: url('../imgs/background/sec_one/home-bg1.png');
+}
+
+.sec_one_bg2 {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url('../imgs/background/sec_one/home-bg2.png');
+}
+
+.sec_one_bg3 {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../imgs/background/sec_one/home-bg4.png');
+    display: flex;
+}
+
+.sec_one_content {
+    width: 40%;
+    /* border: 1px solid #fff; */
+    margin-left: 10%;
+    padding-top: 20%;
+}
+
+.sec_one_content h1 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.sec_one_content p {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* Кнопка ----------------------------- */
+
+.btn {
+    background-color: #cc2120;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 12px 35px;
+    text-transform: uppercase;
+    font-size: 11.5px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.btn:hover {
+    transition: .5s;
+    background-color: #fff;
+    color: #cc2120;
+    border: 2px solid #cc2120;
+}
+
+.sec_one_video {
+    width: 40%;
+    height: 80%;
+    /* border: 1px solid #fff; */
+    position: absolute;
+    bottom: -65px;
+    right: 100px;
+}
+
+.sec_one_video video {
+    width: 100%;
+    height: 100%;
+}
+
+.sec_one_gif {
+    padding-top: 67.701%;
+    /* position: relative; */
+}
+
+
+/* 2я секция */
+
+.sec_two {
+    height: 100vh;
+    display: flex;
+}
+
+.sec_two_img {
+    width: 40%;
+    height: 70%;
+    background-image: url('../imgs/background/sec_two/home-watch1.png');
+    background-size: cover;
+    margin: 5.5%;
+    margin-top: 16%;
+    bottom: 0px;
+    /* position: absolute; */
+}
+
+.sec_two_container {
+    margin-top: 15%;
+    width: 40%;
+}
+
+.sec_two_container h6 {
+    color: #494848;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.sec_two_container h1 {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.sec_two_content {
+    margin: 30px 0;
+    display: flex;
+}
+
+.st_icon {
+    width: 22%;
+    margin-right: 30px;
+}
+
+.st_icon img {
+    width: 100%;
+}
+
+.sec_t_text h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sec_t_text p {
+    color: #a4a4a4;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+
+/* 3я секция */
+
+.sec_th {
+    height: 80vh;
+    /* border: 1px solid #000; */
+    background-color: #100f0f;
+}
+
+.sec_th_bg1 {
+    width: 100%;
+    height: 100%;
+    background-image: url('../imgs/background/sec_th/home-bg5.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-attachment: fixed;
+}
+
+.sec_th_bg2 {
+    width: 100%;
+    height: 100%;
+    background-image: url('../imgs/background/sec_th/home-bg6.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.sec_th_content {
+    width: 50%;
+    margin-top: 15%;
+}
+
+.sec_th_content h1,
+.sec_th_content p {
+    text-align: center;
+    color: #fff;
+}
+
+.sec_th_content h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.sec_th_content p {
+    font-size: 13px;
+    font-weight: 300;
+    margin: 30px 0;
+}
+
+.sec_th_content a {
+    width: 70px;
+    height: 70px;
+    border-radius: 100% 100%;
+    color: #fff;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    text-decoration: none;
+    background-color: #cc2120;
+    margin-bottom: 30px;
+    opacity: 0.7;
+    transition: .3s;
+}
+
+.sec_th_content a:hover {
+    transition: .5s;
+    opacity: 1;
+    border: 0.5px solid #fff;
+}
+
+.sec_th_content img {
+    width: 40%;
+    position: absolute;
+    bottom: 0px;
+    /* text-align: center; */
+    margin: 0 5%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+
+/* 4я секция */
+
+.sec_four {
+    height: 80vh;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    margin: 10% 0;
+}
+
+.sec_four_container h3 {
+    color: #494848;
+    text-transform: uppercase;
+    font-size: 15px;
+    text-align: center;
+}
+
+.sec_four_container h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.sec_four_card_cont {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.sec_four_card {
+    width: 28%;
+    height: 380px;
+    border-radius: 20px;
+    background-color: #f5f5f5;
+    margin: 0 1%;
+    text-align: center;
+    transition: 1s;
+}
+
+.sec_four_card img {
+    border-radius: 50%;
+    margin-top: 20%;
+    width: 35%;
+    border: 8px solid rgba(16, 15, 15, 0.1);
+}
+
+.sec_four_card h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.sec_four_card p {
+    color: #a4a4a4;
+    font-size: 13px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+
+/*------------ Вместо div попробовал так--------------- */
+
+.sec_four_card span {
+    border-bottom: 2px solid #cc2120;
+}
+
+.sec_four_card h5 {
+    font-size: 11px;
+    font-weight: 400;
+    color: #494848;
+    line-height: 15px;
+    margin: 0 10%;
+}
+
+.sec_four_card:hover {
+    transition: 1s;
+    border: 2px solid #cc2120;
+    transform: scale(1.05);
+}
+
+
+/* 5я секция */
+
+.sec_five {
+    height: 120vh;
+    background-color: #100f0f;
+}
+
+.sec_five_bg1 {
+    width: 100%;
+    height: 100%;
+    background-image: url('../imgs/background/sec_five/home-bg7.png');
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.sec_five_bg1 h5 {
+    padding-top: 10%;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.sec_five_bg1 h1 {
+    font-size: 40px;
+}
+
+.sec_five_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.sec_five_card {
+    width: 25%;
+    height: 250px;
+    margin: 0 20px;
+}
+
+.sec_five_card img {
+    width: 25%;
+}
+
+.sec_five_card h2 {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.sec_five_card p {
+    font-size: 12px;
+    font-weight: 350;
+}
+
+.watch_sf {
+    width: 45%;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+}
+
+.sec_six {
+    text-align: center;
+    padding: 10% 0;
+}
+
+.sec_six h2 {
+    color: #494848;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 15px 0;
+}
+
+.sec_six h1 {
+    font-size: 40px;
+    margin-bottom: 60px;
+}
+
+.sec_six_container {
+    width: 45%;
+    margin: auto;
+}
+
+.sec_six_container img {
+    width: 80%;
+}
+
+.sec_six_container h3 {
+    font-size: 30px;
+    color: #cc2120;
+    margin: 15px 0;
+}
+
+.sec_six_container p {
+    color: #a4a4a4;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.sec_six_container h4 {
+    margin-top: 20px;
+}
+
+.sec_six_container h5 {
+    margin-top: 10px;
+    color: #cc2120;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.slider_tabs {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.tab {
+    margin: 0 5px;
+    width: 11px;
+    height: 11px;
+    background-color: #000;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.tab:hover {
+    transition: .3s;
+    background-color: #cc2120;
+}
+
+.tab.active {
+    background-color: #cc2120;
+}
+
+
+/* 7я секция */
+
+.sec_sev {
+    height: 80vh;
+    background-color: #100f0f;
+}
+
+.sec_sev_bg1 {
+    background-image: url('../imgs/background/sec_sev/bg8.png');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+.sec_sev_bg2 {
+    background-image: url('../imgs/background/sec_sev/bg9.png');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sec_sev_content {
+    width: 40%;
+}
+
+.sec_sev_content h1 {
+    color: #fff;
+    font-size: 40px;
+}
+
+.sec_sev_content span {
+    color: #cc2120;
+}
+
+.sec_sev_content p {
+    color: #fff;
+    margin: 30px 0 40px 0;
+    font-weight: 300;
+    font-size: 13px;
+    width: 90%;
+}
+
+.sec_sev_img {
+    width: 40%;
+    height: 100%;
+    background-size: cover;
+    background-image: url('../imgs/background/sec_sev/watch3.png');
+}
+
+
+/* 8я секция */
+
+.sec_eight {
+    height: 85vh;
+    text-align: center;
+}
+
+.sec_eight h2 {
+    margin-top: 5%;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #494848;
+}
+
+.sec_eight h1 {
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+.sec_e_container {
+    display: flex;
+    justify-content: center;
+    margin: 5% 0;
+}
+
+.sec_e_content,
+.sec_e_links {
+    width: 40%;
+    /* border: 1px solid #000; */
+    /* margin: auto; */
+    text-align: left;
+}
+
+.sec_e_content p {
+    margin-top: 10px;
+    line-height: 22px;
+    font-size: 12px;
+}
+
+.sec_e_content h3 {
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.sec_e_content h4 {
+    margin-bottom: 15px;
+    color: #a4a4a4;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.sec_e_content a {
+    color: #a4a4a4;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.sec_e_content i {
+    color: #cc2120;
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+.sec_e_content a:hover {
+    transition: .5s;
+    color: #cc2120;
+}
+
+.red a {
+    color: #cc2120;
+    transition: .3s;
+}
+
+.red a:hover {
+    transition: .5s;
+    color: #a4a4a4;
+}
+
+.sec_e_links input,
+.sec_e_links textarea {
+    width: 100%;
+    background-color: #f5f5f5;
+    color: #100f0f;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    margin: 10px 0;
+}
+
+.sec_e_links textarea {
+    height: 50%;
+    margin-bottom: 20px;
+}
+
+.sec_e_links input::placeholder,
+.sec_e_links textarea::placeholder {
+    color: #100f0f;
+    font-size: 13px;
+    padding: 20px;
+}
+
+
+/* Подвал */
+
+.bacement {
+    height: 5vh;
+    background-color: #cc2120;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
